@@ -1,6 +1,3 @@
-# Spicetify-Extensions
-Collection of my Spicetify Extensions
-
 # Copy Playlist Info
 Filename : `copyPlaylistInfo.js`
 

@@ -1,0 +1,9 @@
+[
+	{
+		"name": "Copy Playlist Info",
+		"description": "Copy various information about the songs in your Playlist into your Clipboard (Artist, Album Name, Date Added, Duration, Image URL, Song URL).",
+		"preview": "copyPlaylistInfo/preview.jpg",
+		"main": "copyPlaylistInfo/copyPlaylistInfo.js",
+		"readme": "copyPlaylistInfo/README.md"
+	}
+]
