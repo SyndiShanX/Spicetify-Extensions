@@ -1,11 +1,6 @@
 # Spicetify-Extensions
 Collection of my Spicetify Extensions
 
-# Fix Tippy Boxes
-Filename : `fixTippyBoxes.js`
-
-Fixes Tippy Boxes in Zoomed Theme.
-
 # Copy Playlist Info
 Filename : `copyPlaylistInfo.js`
 
