@@ -5,11 +5,5 @@
 		"preview": "copyPlaylistInfo/preview.jpg",
 		"main": "copyPlaylistInfo/copyPlaylistInfo.js",
 		"readme": "copyPlaylistInfo/README.md"
-	},
-	{
-		"name": "Fix Tippy Boxes",
-		"description": "Fixes Tippy Boxes in Zoomed Theme.",
-		"main": "fixTippyBoxes/fixTippyBoxes.js",
-		"readme": "fixTippyBoxes/README.md"
 	}
 ]
