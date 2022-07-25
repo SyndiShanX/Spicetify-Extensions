@@ -29,7 +29,8 @@
 		}
 		
 		for (i = 0; i < tracks.items.length; i++) {
-			synTracks = synTracks + '		{\n			"Song Name":  "' + tracks.items[i].name.replaceAll('"', '').replaceAll("'", '').replaceAll('\\', '') + '",\n' + '			"Artist":     "' + tracks.items[i].artists[0].name.replaceAll('"', '').replaceAll("'", '').replaceAll('\\', '') + '",\n' + '			"Album Name": "' + tracks.items[i].album.name.replaceAll('"', '').replaceAll("'", '').replaceAll('\\', '') + '",\n' + '			"Date Added": "' + tracks.items[i].addedAt.toDateString().substring(4) + '",\n' + '			"Duration":   "' + millisToMinutesAndSeconds(tracks.items[i].duration.milliseconds) + '",\n' + '			"Image URL":  "https://i.scdn.co/image/' + tracks.items[i].album.images[0].url.split('image:')[1] + '",\n' + '			"Song URL":   "https://open.spotify.com/track/' + tracks.items[i].uri.split('track:')[1] + '"\n		},\n'
+			songDate = tracks.items[i].addedAt; songDate = new Date(songDate); songDate = songDate.toDateString().substring(4)
+			synTracks = synTracks + '		{\n			"Song Name":  "' + tracks.items[i].name.replaceAll('"', '').replaceAll("'", '').replaceAll('\\', '') + '",\n' + '			"Artist":     "' + tracks.items[i].artists[0].name.replaceAll('"', '').replaceAll("'", '').replaceAll('\\', '') + '",\n' + '			"Album Name": "' + tracks.items[i].album.name.replaceAll('"', '').replaceAll("'", '').replaceAll('\\', '') + '",\n' + '			"Date Added": "' + songDate + '",\n' + '			"Duration":   "' + millisToMinutesAndSeconds(tracks.items[i].duration.milliseconds) + '",\n' + '			"Image URL":  "https://i.scdn.co/image/' + tracks.items[i].album.images[0].url.split('image:')[1] + '",\n' + '			"Song URL":   "https://open.spotify.com/track/' + tracks.items[i].uri.split('track:')[1] + '"\n		},\n'
 		}
 		
 		synPlaylist = '{\n	"Playlist": "' + playlist.name + '",\n  "Songs": [\n' + synTracks.slice(0, -2) + '\n  ]\n}'
