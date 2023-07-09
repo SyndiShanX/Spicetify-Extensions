@@ -1,7 +1,5 @@
-# Spicetify-Extensions
+# Spicetify Extensions
 Collection of my Spicetify Extensions
-
-Made by: SyndiShanX#4620
 
 # Copy Playlist Info
 Filename : `copyPlaylistInfo.js`
