@@ -6,6 +6,11 @@
 
 (function copyPlaylistInfoMain(){
 	
+	if (!(Spicetify.CosmosAsync && Spicetify.ContextMenu)) {
+		setTimeout(copyPlaylistInfoMain, 200);
+		return;
+	}
+	
 	function uriPlaylist(uris){
 		if (uris.length > 1) {
 			return false;
@@ -15,12 +20,12 @@
 		if (uriObj.type === Spicetify.URI.Type.PLAYLIST || uriObj.type === Spicetify.URI.Type.PLAYLIST_V2) 
 			return true;
 		return false;
-    }
+	}
 	
 	async function copyPlaylistInfo(uri) {
-		playlist = await Spicetify.Platform.PlaylistAPI.getMetadata(uri)
-		tracks = await Spicetify.Platform.PlaylistAPI.getContents(uri)
-		synTracks = ''
+		playlist = await Spicetify.Platform.PlaylistAPI.getMetadata(String(uri));
+		tracks = await Spicetify.Platform.PlaylistAPI.getContents(String(uri));
+		synTracks = '';
 		
 		function millisToMinutesAndSeconds(millis) {
 			var minutes = Math.floor(millis / 60000);
